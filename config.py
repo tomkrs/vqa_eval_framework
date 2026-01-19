@@ -12,7 +12,7 @@ class RunConfig:
     vqarad_dataset_id: str = "flaviagiammarino/vqa-rad"
 
     # Runtime
-    device: str = "cpu"  # "cpu" or "cuda"
+    device: str = "cuda"  # "cpu" or "cuda"
     dtype: str = "float16"   # "float16" or "bfloat16" on supported GPUs
     max_new_tokens: int = 32
 
