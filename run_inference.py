@@ -20,8 +20,9 @@ def postprocess_prediction(text: str) -> str:
         if t.startswith(prefix):
             t = t[len(prefix):].strip()
 
-    # keep only first line (many models add explanations)
-    t = t.splitlines()[0].strip()
+    # keep only first non-empty line (many models add explanations)
+    lines = [ln.strip() for ln in t.splitlines() if ln.strip()]
+    t = lines[0] if lines else ""
 
     # normalize yes/no variants a bit
     low = t.lower().strip(" .,!?:;")

@@ -21,7 +21,7 @@ def print_metrics(model_name: str, dataset_name: str, metrics: Dict[str, Any]) -
 
     print(f"model: {model_name}")
     print(f"dataset: {dataset_name}")
-    print(f"accuracy overall (+/- std): {fmt_acc(_acc(o),  _std(o))}   (n={int(o.get('n',0))})")
-    print(f"accuracy open (+/- std):    {fmt_acc(_acc(op), _std(op))}   (n={int(op.get('n',0))})")
-    print(f"accuracy closed (+/- std):  {fmt_acc(_acc(cl), _std(cl))}   (n={int(cl.get('n',0))})")
+    print(f"accuracy overall: {fmt_acc(_acc(o),  _std(o))}   (n={int(o.get('n',0))})")
+    print(f"accuracy open:    {fmt_acc(_acc(op), _std(op))}   (n={int(op.get('n',0))})")
+    print(f"accuracy closed:  {fmt_acc(_acc(cl), _std(cl))}   (n={int(cl.get('n',0))})")
     print("-" * 60)
