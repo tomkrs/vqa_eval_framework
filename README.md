@@ -104,3 +104,7 @@ accuracy closed:  xx.xx% (+/- x.xx%)   (n=...)
 ## Tech stack
 
 Python · PyTorch · Hugging Face Transformers · Hugging Face Datasets · Pillow
+
+## License
+
+[MIT](LICENSE) © Tom Kraus. The datasets and pretrained models keep their own licenses (see their Hugging Face pages).
