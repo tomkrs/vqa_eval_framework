@@ -1,0 +1,8 @@
+# Runtime dependencies (Google Colab already ships most of these)
+torch
+transformers>=4.39.0
+datasets>=2.18.0
+huggingface_hub
+pillow
+tqdm
+accelerate  # needed for device_map="auto"

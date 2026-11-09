@@ -32,7 +32,7 @@ class GITVQAV2(VQAModel):
         # 1) image -> pixel_values
         pixel_values = self.processor(images=image, return_tensors="pt").pixel_values.to(self.model.device)
 
-        # 2) question -> input_ids (GIT VQA pattern: CLS + question tokens) :contentReference[oaicite:1]{index=1}
+        # 2) question -> input_ids (GIT VQA pattern: CLS + question tokens)
         q_ids = self.processor(text=question, add_special_tokens=False).input_ids
         input_ids = torch.tensor([([self.cls_id] + q_ids)], device=self.model.device)
 
